@@ -33,7 +33,7 @@ def Chance(y):
     if y>0.5:
         return 'The Passenger will survive the journey'
     else:
-        return 'The Passenger won't survive the journey'
+        return "The Passenger won't survive the journey"
     
 if st.button('Predict Survival chance'):
     st.write("Probability for Passenger's survival",y)
