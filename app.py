@@ -3,9 +3,9 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 import pickle
 
-st.title("Passenger Survival Chance in Titanic Journey")
-pclass=st.slider('Enter the Passender class fot the user',1,3)
-sex=st.selectbox('Enter the Passenger Gender',['male','female'])
+st.title("Passengers Survival Chance in Titanic Journey")
+pclass=st.slider('Enter the Passengers class for the user',1,3)
+sex=st.selectbox('Enter the Passengers Gender',['male','female'])
 sibsp=st.slider('Enter the Passengers Sibling and spouse', 1,8)
 parch=st.slider('Enter the Passengers total number of parents and child', 1,6)
 fare=st.number_input('Enter the Fare of the Passenger')
@@ -31,9 +31,9 @@ y=y[0][0]
 
 def Chance(y):
     if y>0.5:
-        return 'The Passenger will survive the jounrey'
+        return 'The Passenger will survive the journey'
     else:
-        return 'The Passenger wont survive the journey'
+        return 'The Passenger won't survive the journey'
     
 if st.button('Predict Survival chance'):
     st.write("Probability for Passenger's survival",y)
